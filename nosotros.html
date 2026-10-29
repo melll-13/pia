@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros | PIA</title>
+  <meta name="description" content="Conoce la trayectoria de más de 30 años de PIA, nuestra misión, visión, valores y acreditaciones ema A.C. / ISO 17025.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+ <header style="position:sticky; top:0; z-index:1000; background:rgba(255,255,255,0.9); backdrop-filter:blur(12px); border-bottom:1px solid rgba(226,232,240,0.8);">
+  <div class="header-container">
+
+    <!-- GRUPO IZQUIERDA: LOGO + MENÚ -->
+    <div class="header-left">
+      <a href="index.html" style="display:flex; align-items:center;">
+        <img src="assets/pialogo.png" alt="PIA" style="display:block; height:44px; width:auto;">
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="index.html" style="display:block; padding:10px 16px; color:#0284c7; font-size:14px; font-weight:600; border-radius:8px;">Inicio</a></li>
+          <li><a href="nosotros.html" style="display:block; padding:10px 16px; color:#475569; font-size:14px; font-weight:500; border-radius:8px;">Sobre Nosotros</a></li>
+
+          <!-- SERVICIOS -->
+          <li style="position:relative;" onmouseenter="document.getElementById('drop-servicios').style.display='block';" onmouseleave="document.getElementById('drop-servicios').style.display='none';">
+            <a href="servicios.html" style="display:flex; align-items:center; gap:4px; padding:10px 16px; color:#475569; font-size:14px; font-weight:500; border-radius:8px;">
+              Servicios <span style="font-size:10px; opacity:0.5;">▾</span>
+            </a>
+            <div id="drop-servicios" class="nav-dropdown-menu servicios-drop">
+              <div class="nav-section-title">Laboratorio</div>
+              <a href="calibracion.html" class="nav-dropdown-item">Calibración</a>
+              <a href="mantenimiento.html" class="nav-dropdown-item">Mantenimiento Preventivo y Correctivo</a>
+              <div class="nav-divider"></div>
+              <div class="nav-section-title">Proyectos</div>
+              <a href="servicios.html#psi" class="nav-dropdown-item">Medición de Aguas (PSI)</a>
+              <a href="servicios.html#llave-en-mano" class="nav-dropdown-item">Soluciones Llave en Mano</a>
+            </div>
+          </li>
+
+          <!-- PRODUCTOS HORIBA -->
+          <li style="position:relative;" onmouseenter="document.getElementById('drop-productos').style.display='block';" onmouseleave="document.getElementById('drop-productos').style.display='none';">
+            <a href="productos.html" style="display:flex; align-items:center; gap:4px; padding:10px 16px; color:#475569; font-size:14px; font-weight:500; border-radius:8px;">
+              Productos HORIBA <span style="font-size:10px; opacity:0.5;">▾</span>
+            </a>
+            <div id="drop-productos" class="nav-dropdown-menu productos-drop">
+              <div class="nav-section-title">De Proceso</div>
+              <a href="productos.html#proceso-gases" class="nav-dropdown-item">Monitoreo de Gases de Proceso</a>
+              <a href="productos.html#proceso-agua" class="nav-dropdown-item">Monitoreo de Agua de Proceso</a>
+              <div class="nav-divider"></div>
+              <div class="nav-section-title">Medio Ambiente</div>
+              <a href="productos.html#emisiones" class="nav-dropdown-item">Emisiones a la Atmósfera (CEMS)</a>
+              <a href="productos.html#calidad-aire" class="nav-dropdown-item">Calidad del Aire</a>
+              <a href="productos.html#agua-residual" class="nav-dropdown-item">Agua Residual y Potable</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- BOTÓN DERECHA -->
+    <div>
+      <a href="#contacto" style="background:#0f172a; color:#ffffff; font-size:13.5px; font-weight:600; padding:11px 22px; border-radius:10px; box-shadow:0 4px 14px rgba(15,23,42,0.12);">Contacto</a>
+    </div>
+
+  </div>
+</header>
+
+
+
+
+  <main>
+    <section style="padding:140px 0 90px 0; background:radial-gradient(circle at top right, rgba(2,132,199,0.06), transparent 50%), #ffffff;">
+      <div style="max-width:960px; margin:0 auto; padding:0 32px; text-align:center;">
+        <span style="display:inline-block; background:#f0f9ff; color:#0284c7; font-weight:600; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; padding:8px 16px; border-radius:50px; margin-bottom:24px; border:1px solid rgba(2,132,199,0.15);">Trayectoria y Respaldo Técnico</span>
+        <h1 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:clamp(2.5rem, 4.5vw, 3.5rem); font-weight:800; color:#0f172a; line-height:1.15; margin:0 0 24px;">Sobre Nosotros</h1>
+        <p style="font-size:1.12rem; color:#64748b; line-height:1.75; max-width:760px; margin:0 auto;">
+          PIA cuenta con más de 30 años de trayectoria y experiencia en soluciones de instrumentación y servicios especializados. Nuestra experiencia, acreditaciones y aprobaciones respaldan el trabajo que realizamos para nuestros clientes.
+        </p>
+      </div>
+    </section>
+
+    <section style="padding:100px 0; background:#f8fafc; border-top:1px solid #f1f5f9;">
+      <div style="max-width:1160px; margin:0 auto; padding:0 32px;">
+        
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:32px; margin-bottom:64px;">
+          <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:20px; padding:40px 36px; box-shadow:0 10px 30px rgba(0,0,0,0.02);">
+            <span style="font-size:11px; font-weight:700; text-transform:uppercase; color:#0284c7; display:block; margin-bottom:12px;">Visión Corporativa</span>
+            <h3 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:1.35rem; color:#0f172a; margin:0 0 14px;">Innovar y Automatizar</h3>
+            <p style="color:#64748b; font-size:0.98rem; line-height:1.7; margin:0;">Empoderar a la generación del cambio con la tecnología de medición, análisis y control más avanzado y confiable que te permita innovar, crear y automatizar[cite: 3].</p>
+          </div>
+
+          <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:20px; padding:40px 36px; box-shadow:0 10px 30px rgba(0,0,0,0.02);">
+            <span style="font-size:11px; font-weight:700; text-transform:uppercase; color:#0284c7; display:block; margin-bottom:12px;">Misión Estratégica</span>
+            <h3 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:1.35rem; color:#0f172a; margin:0 0 14px;">Soluciones de Alta Precisión</h3>
+            <p style="color:#64748b; font-size:0.98rem; line-height:1.7; margin:0;">Proporcionar soluciones de medición y control de alta precisión para gases y agua, contribuyendo al cumplimiento regulatorio, la optimización industrial y la protección del medio ambiente.</p>
+          </div>
+
+          <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:20px; padding:40px 36px; box-shadow:0 10px 30px rgba(0,0,0,0.02);">
+            <span style="font-size:11px; font-weight:700; text-transform:uppercase; color:#0284c7; display:block; margin-bottom:12px;">Calidad y Respaldo</span>
+            <h3 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:1.35rem; color:#0f172a; margin:0 0 14px;">Acreditaciones y Aprobaciones</h3>
+            <p style="color:#64748b; font-size:0.98rem; line-height:1.7; margin:0;">Laboratorio acreditado ante <strong>ema A.C.</strong> de acuerdo a la Norma NMX-EC-17025-IMNC-2018 ISO/IEC 17025:2018, garantizando trazabilidad y confianza[cite: 3].</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- OFFICES SECTION -->
+  <section id="contacto" style="background:#0F2A3D; padding:90px 0; color:#ffffff;">
+    <div style="max-width:1200px; margin:0 auto; padding:0 24px;">
+      <p style="text-align:center; text-transform:uppercase; letter-spacing:1.5px; font-size:0.8rem; font-weight:700; color:#38BDF8; margin:0 0 12px;">Dónde estamos</p>
+      <h2 style="text-align:center; color:#ffffff; font-size:2.2rem; margin:0 0 56px;">Nuestras oficinas</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:28px;">
+        <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-radius:16px; padding:36px 28px;">
+          <h3 style="color:#ffffff; font-size:1.15rem; margin:0 0 16px;">Oficinas CDMX</h3>
+          <p style="font-style:italic; color:#94A3B8; font-size:0.92rem; margin:0;">Oficina comercial</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-radius:16px; padding:36px 28px;">
+          <h3 style="color:#ffffff; font-size:1.15rem; margin:0 0 16px;">Oficinas Guadalajara, Jal.</h3>
+          <p style="font-style:italic; color:#94A3B8; font-size:0.92rem; margin:0;">Oficina comercial</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-radius:16px; padding:36px 28px;">
+          <h3 style="color:#ffffff; font-size:1.15rem; margin:0 0 16px;">Oficinas y Laboratorio</h3>
+          <p style="color:#94A3B8; font-size:0.92rem; margin:0 0 16px;">Sto. Tomás de Aquino No. 8315<br>Puebla, Pue. C.P. 72595</p>
+          <p style="color:#34D399; font-weight:600; font-size:0.92rem; margin:0;">Tel: (222) 213 7100</p>
+        </div>
+      </div>
+
+      <div style="display:flex; justify-content:center; gap:16px; margin-top:56px;">
+        <a href="https://www.facebook.com/profile.php?id=61587414834705" target="_blank" rel="noopener" aria-label="Facebook" style="display:flex; align-items:center; justify-content:center; width:46px; height:46px; border-radius:50%; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.25);"><svg viewBox="0 0 24 24" width="20" height="20" fill="#ffffff"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.8c0-.9.3-1.5 1.6-1.5h1.7V3.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.4H7.7V13h2.7v8h3.1z"/></svg></a>
+        <a href="https://www.instagram.com/grup.othera/" target="_blank" rel="noopener" aria-label="Instagram" style="display:flex; align-items:center; justify-content:center; width:46px; height:46px; border-radius:50%; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.25);"><svg viewBox="0 0 24 24" width="20" height="20" fill="#ffffff"><path d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm5-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21 8.2c-.1-1.6-.4-3-1.6-4.2S16.8 2.1 15.2 2C13.6 1.9 10.4 1.9 8.8 2 7.2 2.1 5.8 2.4 4.6 3.6S2.9 6.2 2.8 7.8c-.1 1.6-.1 4.8 0 6.4.1 1.6.4 3 1.6 4.2s2.6 1.7 4.2 1.8c1.6.1 4.8.1 6.4 0 1.6-.1 3-.4 4.2-1.6s1.7-2.6 1.8-4.2c.1-1.6.1-4.8 0-6.4zM19 17.5a2.7 2.7 0 0 1-1.5 1.5c-1 .4-3.4.3-4.5.3s-3.5.1-4.5-.3A2.7 2.7 0 0 1 7 17.5c-.4-1-.3-3.4-.3-4.5s-.1-3.5.3-4.5A2.7 2.7 0 0 1 8.5 7c1-.4 3.4-.3 4.5-.3s3.5-.1 4.5.3A2.7 2.7 0 0 1 19 8.5c.4 1 .3 3.4.3 4.5s.1 3.5-.3 4.5z"/></svg></a>
+        <a href="https://www.linkedin.com/company/grupo-thera-soluciones/about/?viewAsMember=true" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:flex; align-items:center; justify-content:center; width:46px; height:46px; border-radius:50%; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.25);"><svg viewBox="0 0 24 24" width="20" height="20" fill="#ffffff"><path d="M4.5 3A1.8 1.8 0 1 0 4.5 6.6 1.8 1.8 0 0 0 4.5 3zM3 8.5h3V21H3V8.5zm5 0h2.9v1.7h.1c.4-.8 1.4-1.7 3-1.7 3.2 0 3.8 2.1 3.8 4.8V21h-3v-6.8c0-1.6 0-3.7-2.2-3.7s-2.6 1.8-2.6 3.6V21H8V8.5z"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#0B1E27; color:#94A3B8; padding:32px 0; border-top:1px solid rgba(255,255,255,0.05);">
+    <div style="max-width:1200px; margin:0 auto; padding:0 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; font-size:0.88rem;">
+      <p style="margin:0;">© 2026 Grupo Thera. Todos los derechos reservados.</p>
+      <p style="margin:0;">Powered by ....</p>
+    </div>
+  </footer>
+
+</body>
+</html>
