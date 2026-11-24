@@ -3,130 +3,461 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Productos HORIBA | PIA</title>
-  <meta name="description" content="Catálogo de equipos HORIBA para procesos industriales y medio ambiente.">
-  
+  <title>Productos | PIA</title>
+  <meta name="description" content="Representantes de los productos del área de Proceso y Medio Ambiente de HORIBA. Instrumentos de precisión para medición y análisis.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Estilos complementarios modernos y responsivos respetando la estética original */
+    .gas-pill {
+      display: inline-flex;
+      align-items: center;
+      background: #f1f5f9;
+      color: #0f172a;
+      border: 1px solid #e2e8f0;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+    .norm-badge {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .product-showcase {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 36px;
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+    }
+    .specs-toggle-btn {
+      background: #f8fafc;
+      color: #0f172a;
+      border: 1px solid #cbd5e1;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+    .specs-toggle-btn:hover {
+      background: #f1f5f9;
+      border-color: #94a3b8;
+    }
+    .spec-table-wrapper {
+      overflow-x: auto;
+      margin-top: 24px;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+    }
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+    .spec-table th {
+      background: #f8fafc;
+      color: #0f172a;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      padding: 14px 16px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .spec-table td {
+      padding: 12px 16px;
+      color: #475569;
+      border-bottom: 1px solid #f1f5f9;
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .spec-table tr:last-child td {
+      border-bottom: none;
+    }
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+    .feature-list li {
+      position: relative;
+      padding-left: 20px;
+      color: #475569;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+    .feature-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #0284c7;
+      font-weight: 700;
+    }
+    .video-embed-box {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+    }
+  </style>
 </head>
 <body>
 
   <!-- HEADER / NAV -->
-   <header style="position:sticky; top:0; z-index:1000; background:rgba(255,255,255,0.9); backdrop-filter:blur(12px); border-bottom:1px solid rgba(226,232,240,0.8);">
-  <div class="header-container">
+  <header class="sticky-header">
+    <div class="header-container">
+      <div class="header-left">
+        <a href="index.html" style="display:flex; align-items:center;">
+          <img src="assets/pialogo.png" alt="PIA" style="display:block; height:44px; width:auto;">
+        </a>
+        <nav>
+          <ul>
+            <li><a href="index.html" class="nav-dropdown-item">Inicio</a></li>
+            <li><a href="nosotros.html" class="nav-dropdown-item">Sobre Nosotros</a></li>
+            
+            <!-- SERVICIOS -->
+            <li style="position:relative;" onmouseenter="document.getElementById('drop-servicios').style.display='block';" onmouseleave="document.getElementById('drop-servicios').style.display='none';">
+              <a href="servicios.html" class="nav-dropdown-item">Servicios ▾</a>
+              <div id="drop-servicios" class="nav-dropdown-menu servicios-drop">
+                <div class="nav-section-title">Laboratorio</div>
+                <a href="calibracion.html" class="nav-dropdown-item">Laboratorio de Calibración</a>
+                <a href="mantenimiento.html" class="nav-dropdown-item">Mantenimiento Preventivo y Correctivo</a>
+                <div class="nav-divider"></div>
+                <div class="nav-section-title">Proyectos</div>
+                <a href="servicios.html#psi" class="nav-dropdown-item">Medición de Aguas (PSI)</a>
+                <a href="servicios.html#llave-en-mano" class="nav-dropdown-item">Soluciones Llave en Mano</a>
+              </div>
+            </li>
 
-    <!-- GRUPO IZQUIERDA: LOGO + MENÚ -->
-    <div class="header-left">
-      <a href="index.html" style="display:flex; align-items:center;">
-        <img src="assets/pialogo.png" alt="PIA" style="display:block; height:44px; width:auto;">
-      </a>
+            <!-- PRODUCTOS -->
+            <li style="position:relative;" onmouseenter="document.getElementById('drop-productos').style.display='block';" onmouseleave="document.getElementById('drop-productos').style.display='none';">
+              <a href="productos.html" class="nav-dropdown-item" style="color:#0284c7; font-weight:600;">Productos ▾</a>
+              <div id="drop-productos" class="nav-dropdown-menu productos-drop">
+                <div class="nav-section-title">Medio Ambiente</div>
+                <a href="productos.html#medio-ambiente" class="nav-dropdown-item">Emisiones y Calidad (HORIBA)</a>
+                <a href="productos.html#cems-horiba" class="nav-dropdown-item">Analizadores CEMS y Portátiles</a>
+                <div class="nav-divider"></div>
+                <div class="nav-section-title">Proceso</div>
+                <a href="productos.html#proceso" class="nav-dropdown-item">Procesos Industriales</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-      <nav>
-        <ul>
-          <li><a href="index.html" style="display:block; padding:10px 16px; color:#0284c7; font-size:14px; font-weight:600; border-radius:8px;">Inicio</a></li>
-          <li><a href="nosotros.html" style="display:block; padding:10px 16px; color:#475569; font-size:14px; font-weight:500; border-radius:8px;">Sobre Nosotros</a></li>
-
-          <!-- SERVICIOS -->
-          <li style="position:relative;" onmouseenter="document.getElementById('drop-servicios').style.display='block';" onmouseleave="document.getElementById('drop-servicios').style.display='none';">
-            <a href="servicios.html" style="display:flex; align-items:center; gap:4px; padding:10px 16px; color:#475569; font-size:14px; font-weight:500; border-radius:8px;">
-              Servicios <span style="font-size:10px; opacity:0.5;">▾</span>
-            </a>
-            <div id="drop-servicios" class="nav-dropdown-menu servicios-drop">
-              <div class="nav-section-title">Laboratorio</div>
-              <a href="calibracion.html" class="nav-dropdown-item">Calibración</a>
-              <a href="mantenimiento.html" class="nav-dropdown-item">Mantenimiento Preventivo y Correctivo</a>
-              <div class="nav-divider"></div>
-              <div class="nav-section-title">Proyectos</div>
-              <a href="servicios.html#psi" class="nav-dropdown-item">Medición de Aguas (PSI)</a>
-              <a href="servicios.html#llave-en-mano" class="nav-dropdown-item">Soluciones Llave en Mano</a>
-            </div>
-          </li>
-
-          <!-- PRODUCTOS HORIBA -->
-          <li style="position:relative;" onmouseenter="document.getElementById('drop-productos').style.display='block';" onmouseleave="document.getElementById('drop-productos').style.display='none';">
-            <a href="productos.html" style="display:flex; align-items:center; gap:4px; padding:10px 16px; color:#475569; font-size:14px; font-weight:500; border-radius:8px;">
-              Productos HORIBA <span style="font-size:10px; opacity:0.5;">▾</span>
-            </a>
-            <div id="drop-productos" class="nav-dropdown-menu productos-drop">
-              <div class="nav-section-title">De Proceso</div>
-              <a href="productos.html#proceso-gases" class="nav-dropdown-item">Monitoreo de Gases de Proceso</a>
-              <a href="productos.html#proceso-agua" class="nav-dropdown-item">Monitoreo de Agua de Proceso</a>
-              <div class="nav-divider"></div>
-              <div class="nav-section-title">Medio Ambiente</div>
-              <a href="productos.html#emisiones" class="nav-dropdown-item">Emisiones a la Atmósfera (CEMS)</a>
-              <a href="productos.html#calidad-aire" class="nav-dropdown-item">Calidad del Aire</a>
-              <a href="productos.html#agua-residual" class="nav-dropdown-item">Agua Residual y Potable</a>
-            </div>
-          </li>
-        </ul>
-      </nav>
+      <div>
+        <a href="#contacto" style="background:#0f172a; color:#ffffff; font-size:13.5px; font-weight:600; padding:11px 22px; border-radius:10px;">Contacto</a>
+      </div>
     </div>
-
-    <!-- BOTÓN DERECHA -->
-    <div>
-      <a href="#contacto" style="background:#0f172a; color:#ffffff; font-size:13.5px; font-weight:600; padding:11px 22px; border-radius:10px; box-shadow:0 4px 14px rgba(15,23,42,0.12);">Contacto</a>
-    </div>
-
-  </div>
-</header>
-
-
-
-
+  </header>
 
   <main>
-    <section style="padding:140px 0 90px 0; background:radial-gradient(circle at top right, rgba(2,132,199,0.06), transparent 50%), #ffffff;">
-      <div style="max-width:960px; margin:0 auto; padding:0 32px; text-align:center;">
-        <span style="display:inline-block; background:#f0f9ff; color:#0284c7; font-weight:600; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; padding:8px 16px; border-radius:50px; margin-bottom:24px; border:1px solid rgba(2,132,199,0.15);">Representación Oficial HORIBA</span>
+    <!-- HERO -->
+    <section class="hero-section">
+      <div style="max-width:960px; margin:0 auto; padding:0 32px;">
+        <span class="hero-badge">Representación Oficial HORIBA</span>
         <h1 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:clamp(2.5rem, 4.5vw, 3.5rem); font-weight:800; color:#0f172a; line-height:1.15; margin:0 0 24px;">Productos y Soluciones de Análisis</h1>
         <p style="font-size:1.12rem; color:#64748b; line-height:1.75; max-width:760px; margin:0 auto;">
-          Equipos de instrumentación de alta precisión para el control de procesos industriales y la protección del medio ambiente[cite: 5].
+          Representantes de los productos del área de Proceso y Medio Ambiente de HORIBA, fabricante japonés de instrumentos de precisión para la medición y análisis.
         </p>
       </div>
     </section>
 
-    <section style="padding:100px 0; background:#f8fafc; border-top:1px solid #f1f5f9;">
-      <div style="max-width:1160px; margin:0 auto; padding:0 32px; display:grid; gap:64px;">
+    <!-- CONTENT SECTIONS -->
+    <section class="content-section">
+      <div style="max-width:1160px; margin:0 auto; padding:0 32px; display:grid; gap:72px;">
         
-        <!-- PROCESO -->
-        <div>
-          <span style="font-size:11px; font-weight:700; color:#0284c7; text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:16px;">Línea Industrial</span>
-          <h2 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:2rem; color:#0f172a; margin:0 0 24px;">De Proceso</h2>
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:32px;">
-            <div id="proceso-gases" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:20px; padding:36px; box-shadow:0 10px 30px rgba(0,0,0,0.02);">
-              <h3 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:1.25rem; color:#0f172a; margin:0 0 12px;">Monitoreo de Gases de Proceso</h3>
-              <p style="color:#64748b; font-size:0.95rem; line-height:1.7; margin:0 0 20px;">Analizadores específicos y sistemas diseñados para el control estricto de gases en líneas de producción industrial[cite: 5].</p>
+        <!-- MEDIO AMBIENTE / HORIBA -->
+        <div id="medio-ambiente">
+          <span style="font-size:11px; font-weight:700; color:#0284c7; text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:16px;">Área Ambiental</span>
+          <h2 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:2rem; color:#0f172a; margin:0 0 24px;">HORIBA, tecnología que redefine la exactitud</h2>
+          <p style="color:#64748b; font-size:1.05rem; line-height:1.75; max-width:900px; margin:0 0 24px;">
+            Calidad del aire, gases de combustión, emisiones fugitivas y gases de efecto invernadero (GEI). Representantes de los productos del área de Proceso y Medio Ambiente de HORIBA, fabricante japonés de instrumentos de precisión para la medición y análisis con 73 años de experiencia. Sus décadas de experiencia y avances tecnológicos garantizan sistemas de medición que se ajustan a las variaciones de tus procesos, con tecnología avanzada y la más alta calidad.
+          </p>
+          <p style="font-family:'Plus Jakarta Sans', sans-serif; font-size:1.15rem; font-weight:700; color:#0f172a; margin:0 0 32px;">
+            Cumplimos con la NMX-AA-181-SCFI-2020 y NOM-156-SEMARNAT-2012. Líderes en calidad y certificación ambiental.
+          </p>
+          
+          <div class="card-grid">
+            <div class="content-card">
+              <h3 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:1.25rem; color:#0f172a; margin:0 0 12px;">Emisiones a la Atmósfera</h3>
+              <p style="color:#64748b; font-size:0.95rem; line-height:1.7; margin:0 0 16px;">
+                Los contaminantes atmosféricos y los gases de efecto invernadero suelen provenir de las mismas fuentes. Nuestros analizadores combinan precisión y facilidad de uso para monitorear y ajustar tus procesos en tiempo real:
+              </p>
+              <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:20px; font-size:0.85rem; color:#475569;">
+                <div><strong style="color:#0f172a;">Gases de combustión:</strong> CO, CO₂, NOx, SO₂, O₂, NH₃</div>
+                <div><strong style="color:#0f172a;">Efecto invernadero (GEI):</strong> CO₂, CH₄, N₂O, HCl</div>
+              </div>
+              <a href="#cems-horiba" style="color:#0284c7; font-weight:600; font-size:0.9rem;">Ver analizadores CEMS →</a>
+            </div>
+
+            <div class="content-card">
+              <h3 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:1.25rem; color:#0f172a; margin:0 0 12px;">Emisiones Fugitivas</h3>
+              <p style="color:#64748b; font-size:0.95rem; line-height:1.7; margin:0 0 16px;">
+                Soluciones de monitoreo continuo y medición en campo orientadas al estricto cumplimiento normativo y ambiental, con detección especializada para compuestos clave.
+              </p>
+              <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:20px;">
+                <span class="gas-pill">CO₂</span>
+                <span class="gas-pill">C₃H₈</span>
+              </div>
               <a href="#contacto" style="color:#0284c7; font-weight:600; font-size:0.9rem;">Cotizar equipo →</a>
             </div>
-            <div id="proceso-agua" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:20px; padding:36px; box-shadow:0 10px 30px rgba(0,0,0,0.02);">
-              <h3 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:1.25rem; color:#0f172a; margin:0 0 12px;">Monitoreo de Agua de Proceso</h3>
-              <p style="color:#64748b; font-size:0.95rem; line-height:1.7; margin:0 0 20px;">Instrumentación analítica para la medición continua de parámetros críticos de calidad en agua de proceso[cite: 5].</p>
+
+            <div class="content-card">
+              <h3 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:1.25rem; color:#0f172a; margin:0 0 12px;">Calidad del Aire, Agua y Trazas</h3>
+              <p style="color:#64748b; font-size:0.95rem; line-height:1.7; margin:0 0 20px;">
+                Control de forma inmediata de derrames de aceite en agua y suelo, cumpliendo con normativas vigentes como la NMX-AA-181-SCFI-2020 y NOM-156-SEMARNAT-2012.
+              </p>
               <a href="#contacto" style="color:#0284c7; font-weight:600; font-size:0.9rem;">Cotizar equipo →</a>
             </div>
           </div>
         </div>
 
-        <!-- MEDIO AMBIENTE -->
-        <div>
-          <span style="font-size:11px; font-weight:700; color:#0284c7; text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:16px;">Línea Ambiental</span>
-          <h2 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:2rem; color:#0f172a; margin:0 0 24px;">Medio Ambiente</h2>
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:32px;">
-            <div id="emisiones" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:20px; padding:36px; box-shadow:0 10px 30px rgba(0,0,0,0.02);">
-              <h3 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:1.25rem; color:#0f172a; margin:0 0 12px;">Emisiones a la Atmósfera</h3>
-              <p style="color:#64748b; font-size:0.95rem; line-height:1.7; margin:0 0 20px;">Sistemas de monitoreo continuo para gases de combustión y efecto invernadero en fuentes fijas[cite: 5].</p>
-              <a href="#contacto" style="color:#0284c7; font-weight:600; font-size:0.9rem;">Cotizar equipo →</a>
+        <!-- DETALLE DE SISTEMAS DE MONITOREO CONTINUO Y PORTÁTILES -->
+        <div id="cems-horiba" style="display:grid; gap:40px;">
+          <div>
+            <span style="font-size:11px; font-weight:700; color:#0284c7; text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:12px;">Sistema de monitoreo continuo de emisiones a la atmósfera</span>
+            <h2 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:1.85rem; color:#0f172a; margin:0 0 16px;">Analizadores de Gases de Chimenea HORIBA</h2>
+            <p style="color:#64748b; font-size:1rem; line-height:1.75; max-width:920px; margin:0;">
+              Definido como un conjunto de instrumentos de medición y equipos integrados para ejecutar mediciones específicas, para uno o varios contaminantes provenientes de una fuente fija, con <strong>disponibilidad de operación del 90%</strong>. HORIBA cuenta con más de <strong>100,000 sistemas instalados</strong> en todo el mundo de acuerdo con las normas de Europa y EE. UU. Su tecnología permite conocer la concentración de los contaminantes provenientes de la chimenea y su integración en gabinete con periféricos permite medir y corregir lecturas por variaciones de humedad, temperatura y presión.
+            </p>
+          </div>
+
+          <!-- 1. HORIBA ENDA-7000 -->
+          <div class="product-showcase">
+            <!-- Video Centrado Arriba -->
+            <div style="max-width:720px; margin:0 auto 32px;">
+              <div class="video-embed-box">
+                <video controls preload="metadata" style="width:100%; display:block; max-height:400px; object-fit:cover; margin:0 auto;">
+                  <source src="assets/HORIBA-ENDA-7000-Series-The-Ultimate-Stack-Gas-Analyzer.mp4" type="video/mp4">
+                  Tu navegador no soporta la reproducción de video.
+                </video>
+              </div>
+              <p style="font-size:0.82rem; color:#64748b; margin:10px 0 0; text-align:center;">
+                Presentación técnica: Arquitectura modular, panel de flujo e interfaz táctil de la serie HORIBA ENDA-7000.
+              </p>
             </div>
-            <div id="calidad-aire" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:20px; padding:36px; box-shadow:0 10px 30px rgba(0,0,0,0.02);">
-              <h3 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:1.25rem; color:#0f172a; margin:0 0 12px;">Calidad del Aire</h3>
-              <p style="color:#64748b; font-size:0.95rem; line-height:1.7; margin:0 0 20px;">Estaciones y analizadores de alta sensibilidad orientados a la evaluación de contaminantes ambientales[cite: 5].</p>
-              <a href="#contacto" style="color:#0284c7; font-weight:600; font-size:0.9rem;">Cotizar equipo →</a>
+
+            <!-- Información y Características Debajo del Video -->
+            <div>
+              <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px;">
+                <span class="norm-badge">USEPA 40 CFR 40/60/75</span>
+                <span class="norm-badge">NMX-AA-181-SCFI-2020</span>
+                <span class="norm-badge">NOM-085 / 040 / 098-SEMARNAT</span>
+              </div>
+              <h3 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:1.6rem; font-weight:800; color:#0f172a; margin:0 0 8px;">HORIBA Serie ENDA-7000</h3>
+              <p style="color:#0284c7; font-weight:600; font-size:0.95rem; margin:0 0 16px;">Analizador de gases Extractivo — Monitoreo continuo de NOx, SO₂, CO, CO₂, O₂ y NH₃</p>
+              <p style="color:#64748b; font-size:0.95rem; line-height:1.7; margin:0 0 20px;">
+                Diseño modular: los módulos analizadores se pueden reemplazar en minutos o agregar en el futuro para proporcionar mediciones de gas adicionales. Incorpora pantalla LCD touch screen, hasta 400 días de almacenamiento de datos, acceso remoto a través de teléfono inteligente y hasta 200 alarmas y diagnósticos.
+              </p>
+
+              <ul class="feature-list" style="margin-bottom:24px;">
+                <li><strong>Control e integración total:</strong> Hasta 82 E/S analógicas aisladas de 4-20 mA y hasta 160 E/S digitales con RS-232C, RS-485, Ethernet (Modbus TCP/IP) y USB; acepta entradas analógicas o digitales y controla dispositivos externos como monitores de PST, opacidad y flujo.</li>
+                <li><strong>Compensación automática y modulación Cross-Flow:</strong> Diseñado para compensar automáticamente la interferencia causada por CO₂ y H₂O en la muestra.</li>
+                <li><strong>Panel de distribución y flujo accesible:</strong> Suministro eléctrico 115 VCA @ 60 Hz, monitoreo y control remoto con calibración automática y/o manual, e información en display de concentración de gases, flujo/presión y temperaturas de línea de muestra, sonda y convertidor catalítico NOx.</li>
+              </ul>
+
+              <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
+                <a href="#contacto" style="background:#0f172a; color:#ffffff; font-size:0.9rem; font-weight:600; padding:11px 22px; border-radius:10px;">Solicitar información →</a>
+                <button type="button" class="specs-toggle-btn" onclick="var el=document.getElementById('specs-enda7000'); el.style.display = el.style.display === 'none' ? 'block' : 'none';">
+                  Ver tabla de especificaciones técnicas ▾
+                </button>
+              </div>
             </div>
-            <div id="agua-residual" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:20px; padding:36px; box-shadow:0 10px 30px rgba(0,0,0,0.02);">
-              <h3 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:1.25rem; color:#0f172a; margin:0 0 12px;">Agua Residual y Potable</h3>
-              <p style="color:#64748b; font-size:0.95rem; line-height:1.7; margin:0 0 20px;">Equipos orientados al cumplimiento normativo en cuerpos de agua residual y plantas de tratamiento o potabilización[cite: 5].</p>
+
+            <!-- Tabla desplegable ENDA-7000 -->
+            <div id="specs-enda7000" style="display:none;">
+              <div class="spec-table-wrapper">
+                <table class="spec-table">
+                  <thead>
+                    <tr>
+                      <th>Componente</th>
+                      <th>Rango de Medición</th>
+                      <th>Principio de Medición</th>
+                      <th>Desempeño y Especificaciones</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>CO</strong></td>
+                      <td>0–5 / 500 ppm<br>0–100 / 5000 ppm</td>
+                      <td>Infrarrojo no dispersivo (NDIR)</td>
+                      <td>Compensación automática de interferencia por CO₂ y H₂O en la muestra. Rango dual adaptable a variaciones del proceso.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>CO₂</strong></td>
+                      <td>0–5% / 0–5–50%</td>
+                      <td>Infrarrojo no dispersivo (NDIR)</td>
+                      <td rowspan="5">
+                        <strong>Repetibilidad:</strong> ±0.5% de escala completa<br>
+                        <strong>Zero Drift / Linealidad:</strong> ±1.0% de escala completa por semana<br>
+                        <strong>Span Drift:</strong> ±2.0% de escala completa por semana<br>
+                        <strong>Tiempo de respuesta (T₉₀):</strong> &lt; 40 s<br>
+                        <strong>Caudal del gas de muestra:</strong> 2.5 a 5 lpm
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>NOx</strong></td>
+                      <td>0–5 / 5000 ppm<br>0–200 / 5000 ppm</td>
+                      <td>Quimioluminiscencia (CLA) o NDIR</td>
+                    </tr>
+                    <tr>
+                      <td><strong>SO₂</strong></td>
+                      <td>0–10 / 1000 ppm<br>0–200 / 5000 ppm</td>
+                      <td>NDIR o Ultravioleta no dispersivo (NDUV)</td>
+                    </tr>
+                    <tr>
+                      <td><strong>O₂</strong></td>
+                      <td>0–5 / 25%</td>
+                      <td>Magneto-neumático (MPA)</td>
+                    </tr>
+                    <tr>
+                      <td><strong>NH₃</strong></td>
+                      <td>0–10 / 100 ppm</td>
+                      <td>Quimioluminiscencia (CLA)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. HORIBA VA-5000 & 3. PORTÁTIL PG-300 -->
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(340px, 1fr)); gap:28px;">
+            
+            <!-- HORIBA VA-5000 -->
+            <div class="product-showcase" style="display:flex; flex-direction:column; justify-content:space-between;">
+              <div>
+                <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px;">
+                  <span class="norm-badge">USEPA 40 CFR 40/60/75</span>
+                  <span class="norm-badge">NMX-AA-181-SCFI-2020</span>
+                  <span class="norm-badge">NOM-085 / 040 / 098</span>
+                </div>
+                <h3 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:1.4rem; font-weight:800; color:#0f172a; margin:0 0 8px;">Analizador de gases HORIBA VA-5000</h3>
+                <p style="color:#0284c7; font-weight:600; font-size:0.9rem; margin:0 0 14px;">Modulación de flujo cruzado (Cross Flow) integrado con Sistema Extractivo y HORIBA VS-5000</p>
+                <p style="color:#64748b; font-size:0.92rem; line-height:1.7; margin:0 0 18px;">
+                  Ideal para integrarse en Sistemas de Medición Continua ya instalados. Configuración con hasta 4 módulos detectores en gabinete NEMA 1, rack de 19" o montaje en pared (VA-5000WM), con pantalla LCD táctil a color de 5.7" y USB en el panel frontal para registrar configuraciones instantáneas.
+                </p>
+
+                <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:18px;">
+                  <span class="gas-pill">CO (NDIR)</span>
+                  <span class="gas-pill">CO₂ (NDIR)</span>
+                  <span class="gas-pill">NO / NOx (CLA/NDIR)</span>
+                  <span class="gas-pill">N₂O (NDIR)</span>
+                  <span class="gas-pill">SO₂ (NDIR)</span>
+                  <span class="gas-pill">CH₄ (NDIR)</span>
+                  <span class="gas-pill">O₂ (MPA)</span>
+                </div>
+
+                <ul class="feature-list" style="margin-bottom:20px;">
+                  <li><strong>Hasta 4 rangos de medición seleccionables</strong> por parámetro y detectores de compensación de interferencia para NOx por H₂O y CO₂.</li>
+                  <li><strong>Desempeño y conectividad:</strong> Tiempo de respuesta (T₉₀) &lt; 30 s, flujo de muestra 0.50 SLPM, linealidad 1.0% F.S., salidas 4–20 mA y Ethernet (Modbus TCP).</li>
+                  <li><strong>Dimensiones y alimentación:</strong> 430 (W) × 380 (D) × 132 (H) mm, masa 7–18 kg, 115 Vac @ 60 Hz / 100–240 V CA.</li>
+                </ul>
+              </div>
+
+              <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center; padding-top:12px; border-top:1px solid #f1f5f9;">
+                <a href="#contacto" style="color:#0284c7; font-weight:600; font-size:0.9rem;">Cotizar VA-5000 →</a>
+                <button type="button" class="specs-toggle-btn" style="padding:7px 14px; font-size:0.82rem;" onclick="var el=document.getElementById('specs-va5000'); el.style.display = el.style.display === 'none' ? 'block' : 'none';">
+                  Rangos de medición ▾
+                </button>
+              </div>
+
+              <div id="specs-va5000" style="display:none;">
+                <div class="spec-table-wrapper">
+                  <table class="spec-table" style="font-size:0.82rem;">
+                    <thead>
+                      <tr>
+                        <th>Gas</th>
+                        <th>Rangos de Medición</th>
+                        <th>Principio</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td><strong>CO</strong></td><td>0–50/200 ppm; 0–100%</td><td>NDIR</td></tr>
+                      <tr><td><strong>CO₂</strong></td><td>0–50/100 ppm; 0–100%</td><td>NDIR</td></tr>
+                      <tr><td><strong>NO / NOx</strong></td><td>NO/NOx: 0–5000 ppm; NO: 0–500 ppm</td><td>CLA / NDIR</td></tr>
+                      <tr><td><strong>N₂O</strong></td><td>0–100 ppm; 0–5000 ppm</td><td>NDIR</td></tr>
+                      <tr><td><strong>SO₂</strong></td><td>0–100/200 ppm; 0–10%</td><td>NDIR</td></tr>
+                      <tr><td><strong>CH₄</strong></td><td>0–100/200 ppm; 0–100%</td><td>NDIR</td></tr>
+                      <tr><td><strong>O₂</strong></td><td>0–5 / 25%</td><td>Magneto-neumático (MPA)</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- ANALIZADOR PORTÁTIL PG-300 -->
+            <div class="product-showcase" style="display:flex; flex-direction:column; justify-content:space-between;">
+              <div>
+                <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px;">
+                  <span class="norm-badge">NOM 085 SEMARNAT 2020</span>
+                  <span class="norm-badge">NMX-AA-181-SCFI-2020</span>
+                </div>
+
+                <span style="font-size:11px; font-weight:700; color:#0284c7; text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:6px;">
+                  Analizadores de gases portátiles
+                </span>
+
+                <h3 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:1.4rem; font-weight:800; color:#0f172a; margin:0 0 8px;">
+                  Analizador portátil PG-300
+                </h3>
+
+                <p style="color:#0284c7; font-weight:700; font-size:0.88rem; letter-spacing:0.3px; margin:0 0 14px;">
+                  PG-300 INNOVACIÓN AL ALCANCE DE TUS MANOS · MULTICOMPONENTES
+                </p>
+
+                <p style="color:#64748b; font-size:0.92rem; line-height:1.7; margin:0 0 20px;">
+                  Analiza múltiples rangos de gases con un solo dispositivo, diseñado para adaptarse a cualquier entorno industrial garantizando resultados sin precedentes.
+                </p>
+
+                <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:14px 16px; margin-bottom:20px;">
+                  <p style="font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:0.6px; color:#0f172a; margin:0 0 8px;">
+                    Cumplimiento normativo
+                  </p>
+                  <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                    <span class="gas-pill">NOM 085 SEMARNAT 2020</span>
+                    <span class="gas-pill">NMX-AA-181-SCFI-2020</span>
+                  </div>
+                </div>
+              </div>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; padding-top:12px; border-top:1px solid #f1f5f9;">
+                <a href="#contacto" style="color:#0284c7; font-weight:600; font-size:0.9rem;">Cotizar PG-300 →</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PROCESO INDUSTRIAL -->
+        <div id="proceso">
+          <span style="font-size:11px; font-weight:700; color:#0284c7; text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:16px;">Área Industrial</span>
+          <h2 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:2rem; color:#0f172a; margin:0 0 24px;">Procesos Industriales</h2>
+          
+          <div class="card-grid">
+            <div class="content-card">
+              <h3 style="font-family:'Plus Jakarta Sans', sans-serif; font-size:1.25rem; color:#0f172a; margin:0 0 12px;">Instrumentación de Proceso HORIBA</h3>
+              <p style="color:#64748b; font-size:0.95rem; line-height:1.7; margin:0 0 20px;">
+                Décadas de experiencia y avances tecnológicos que garantizan sistemas de medición altamente confiables ajustados a las necesidades de la industria.
+              </p>
               <a href="#contacto" style="color:#0284c7; font-weight:600; font-size:0.9rem;">Cotizar equipo →</a>
             </div>
           </div>
@@ -137,20 +468,21 @@
   </main>
 
   <!-- OFFICES SECTION -->
-  <section id="contacto" style="background:#0F2A3D; padding:90px 0; color:#ffffff;">
+  <section id="contacto" class="offices-section">
     <div style="max-width:1200px; margin:0 auto; padding:0 24px;">
       <p style="text-align:center; text-transform:uppercase; letter-spacing:1.5px; font-size:0.8rem; font-weight:700; color:#38BDF8; margin:0 0 12px;">Dónde estamos</p>
       <h2 style="text-align:center; color:#ffffff; font-size:2.2rem; margin:0 0 56px;">Nuestras oficinas</h2>
+      
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:28px;">
-        <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-radius:16px; padding:36px 28px;">
+        <div class="office-box">
           <h3 style="color:#ffffff; font-size:1.15rem; margin:0 0 16px;">Oficinas CDMX</h3>
           <p style="font-style:italic; color:#94A3B8; font-size:0.92rem; margin:0;">Oficina comercial</p>
         </div>
-        <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-radius:16px; padding:36px 28px;">
+        <div class="office-box">
           <h3 style="color:#ffffff; font-size:1.15rem; margin:0 0 16px;">Oficinas Guadalajara, Jal.</h3>
           <p style="font-style:italic; color:#94A3B8; font-size:0.92rem; margin:0;">Oficina comercial</p>
         </div>
-        <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-radius:16px; padding:36px 28px;">
+        <div class="office-box">
           <h3 style="color:#ffffff; font-size:1.15rem; margin:0 0 16px;">Oficinas y Laboratorio</h3>
           <p style="color:#94A3B8; font-size:0.92rem; margin:0 0 16px;">Sto. Tomás de Aquino No. 8315<br>Puebla, Pue. C.P. 72595</p>
           <p style="color:#34D399; font-weight:600; font-size:0.92rem; margin:0;">Tel: (222) 213 7100</p>
@@ -158,17 +490,21 @@
       </div>
 
       <div style="display:flex; justify-content:center; gap:16px; margin-top:56px;">
-        <a href="https://www.facebook.com/profile.php?id=61587414834705" target="_blank" rel="noopener" aria-label="Facebook" style="display:flex; align-items:center; justify-content:center; width:46px; height:46px; border-radius:50%; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.25);"><svg viewBox="0 0 24 24" width="20" height="20" fill="#ffffff"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.8c0-.9.3-1.5 1.6-1.5h1.7V3.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.4H7.7V13h2.7v8h3.1z"/></svg></a>
-        <a href="https://www.instagram.com/grup.othera/" target="_blank" rel="noopener" aria-label="Instagram" style="display:flex; align-items:center; justify-content:center; width:46px; height:46px; border-radius:50%; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.25);"><svg viewBox="0 0 24 24" width="20" height="20" fill="#ffffff"><path d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm5-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21 8.2c-.1-1.6-.4-3-1.6-4.2S16.8 2.1 15.2 2C13.6 1.9 10.4 1.9 8.8 2 7.2 2.1 5.8 2.4 4.6 3.6S2.9 6.2 2.8 7.8c-.1 1.6-.1 4.8 0 6.4.1 1.6.4 3 1.6 4.2s2.6 1.7 4.2 1.8c1.6.1 4.8.1 6.4 0 1.6-.1 3-.4 4.2-1.6s1.7-2.6 1.8-4.2c.1-1.6.1-4.8 0-6.4zM19 17.5a2.7 2.7 0 0 1-1.5 1.5c-1 .4-3.4.3-4.5.3s-3.5.1-4.5-.3A2.7 2.7 0 0 1 7 17.5c-.4-1-.3-3.4-.3-4.5s-.1-3.5.3-4.5A2.7 2.7 0 0 1 8.5 7c1-.4 3.4-.3 4.5-.3s3.5-.1 4.5.3A2.7 2.7 0 0 1 19 8.5c.4 1 .3 3.4.3 4.5s.1 3.5-.3 4.5z"/></svg></a>
-        <a href="https://www.linkedin.com/company/grupo-thera-soluciones/about/?viewAsMember=true" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:flex; align-items:center; justify-content:center; width:46px; height:46px; border-radius:50%; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.25);"><svg viewBox="0 0 24 24" width="20" height="20" fill="#ffffff"><path d="M4.5 3A1.8 1.8 0 1 0 4.5 6.6 1.8 1.8 0 0 0 4.5 3zM3 8.5h3V21H3V8.5zm5 0h2.9v1.7h.1c.4-.8 1.4-1.7 3-1.7 3.2 0 3.8 2.1 3.8 4.8V21h-3v-6.8c0-1.6 0-3.7-2.2-3.7s-2.6 1.8-2.6 3.6V21H8V8.5z"/></svg></a>
+        <a href="https://www.facebook.com/profile.php?id=61585844746764" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon-btn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="#ffffff"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.8c0-.9.3-1.5 1.6-1.5h1.7V3.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.4H7.7V13h2.7v8h3.1z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/piagrupothera/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon-btn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="#ffffff"><path d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm5-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21 8.2c-.1-1.6-.4-3-1.6-4.2S16.8 2.1 15.2 2C13.6 1.9 10.4 1.9 8.8 2 7.2 2.1 5.8 2.4 4.6 3.6S2.9 6.2 2.8 7.8c-.1 1.6-.1 4.8 0 6.4.1 1.6.4 3 1.6 4.2s2.6 1.7 4.2 1.8c1.6.1 4.8.1 6.4 0 1.6-.1 3-.4 4.2-1.6s1.7-2.6 1.8-4.2c.1-1.6.1-4.8 0-6.4zM19 17.5a2.7 2.7 0 0 1-1.5 1.5c-1 .4-3.4.3-4.5.3s-3.5.1-4.5-.3A2.7 2.7 0 0 1 7 17.5c-.4-1-.3-3.4-.3-4.5s-.1-3.5.3-4.5A2.7 2.7 0 0 1 8.5 7c1-.4 3.4-.3 4.5-.3s3.5-.1 4.5.3A2.7 2.7 0 0 1 19 8.5c.4 1 .3 3.4.3 4.5s.1 3.5-.3 4.5z"/></svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <footer style="background:#0B1E27; color:#94A3B8; padding:32px 0; border-top:1px solid rgba(255,255,255,0.05);">
-    <div style="max-width:1200px; margin:0 auto; padding:0 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; font-size:0.88rem;">
-      <p style="margin:0;">© 2026 Grupo Thera. Todos los derechos reservados.</p>
-      <p style="margin:0;">Powered by ....</p>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div style="max-width:1100px; margin:0 auto; padding:0 32px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; font-size:0.88rem;">
+      <p style="margin:0;">Todos los derechos reservados Precisión Instrumental Aplicada S.A. de C.V. 2024</p>
+      <p style="margin:0;">Powered by ........com</p>
     </div>
   </footer>
 
